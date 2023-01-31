@@ -177,7 +177,7 @@ wxUILocaleImplCF::GetLocalizedName(wxLocaleName name, wxLocaleForm form) const
             str = [convLocale localizedStringForLanguageCode:[m_nsloc languageCode]];
             break;
         case wxLOCALE_NAME_COUNTRY:
-            str = [m_nsloc localizedStringForCountryCode:[m_nsloc countryCode]];
+            str = [convLocale localizedStringForCountryCode:[m_nsloc countryCode]];
             break;
     }
     return wxCFStringRef::AsString(str);
